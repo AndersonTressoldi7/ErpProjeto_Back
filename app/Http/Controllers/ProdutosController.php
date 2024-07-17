@@ -13,4 +13,9 @@ class ProdutosController extends Controller
         $produtos = Produto::all(); 
         return response()->json($produtos, 200, [], JSON_UNESCAPED_UNICODE);
     }
+
+    public function indexProdutoEspecifico($id){
+        $produto = Produto::where('id', $id)->first();
+        return response()->json($produto, 200, [], JSON_UNESCAPED_UNICODE);
+    }
 }

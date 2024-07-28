@@ -10,5 +10,22 @@ use Laravel\Sanctum\HasApiTokens;
 
 class Produto extends Authenticatable
 {
+    protected $fillable = [
+        'codigoBarras',
+        'nome',
+        'observacao',
+        'categoria',
+        'marca',
+        'sku',
+        'preco',
+        'quantidade',
+        'unidadeMedida',
+        'peso',
+        'dimensoes',
+        'dataEntradaEstoque',
+        'status',
+        'referencia',
+    ];
+
    
 }

@@ -18,8 +18,8 @@ class CreateProdutosTable extends Migration
             $table->string('codigoBarras');
             $table->string('nome');
             $table->text('observacao')->nullable();
-            $table->string('categoria');
-            $table->string('marca');
+            $table->string('categoria') ->nullable();
+            $table->string('marca')->nullable();
             $table->string('sku');
             $table->decimal('preco', 10, 2);
             $table->integer('quantidade');

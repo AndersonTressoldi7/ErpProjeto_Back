@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\cidadesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutosController;
 use App\Http\Controllers\PessoasController;
@@ -38,4 +39,9 @@ Route::prefix('pessoas')->group(function () {
    
     Route::post('/', [PessoasController::class, 'CadastrarPessoa']);
     Route::put('/{id}', [PessoasController::class, 'AlteraPessoa']);
+});
+
+Route::prefix('cidades')->group(function () {
+   
+    Route::get('/', [cidadesController::class, 'buscarTodasAsCidades']);
 });
